@@ -2,7 +2,7 @@
 //- ---------------------------------------------
 
 const NUM_LIGHT = 10; // -> cantidad de luces por array
-const LIGHT_CHANGE_TIME = 1000; // -> milisegundos
+const LIGHT_CHANGE_TIME = 1500;
 const app = document.getElementById('app');
 
 let lights = [] // -> guardaremos las luces en un array
@@ -22,6 +22,7 @@ const pattern5 = ['red', 'red', 'red', 'red', 'red', 'green', 'green', 'green', 
 
 const patterns  = [pattern1, pattern2, pattern3, pattern4, pattern5];
 
+
 // ==================================
 // INTERFACE CREATION with DOM
 // ==================================
@@ -37,7 +38,7 @@ function createInterface(){
     indicatorPattern.textContent= 'Patrón 1 de '+ patterns.length;
     app.appendChild(indicatorPattern);
 
-    // -> div conteiner los array
+    // -> div conteiner array
     const lightsContainer = document.createElement('div');
     lightsContainer.classList.add('light-container');
     app.appendChild(lightsContainer);
